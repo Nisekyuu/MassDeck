@@ -1,0 +1,18 @@
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete" style="display: none;">&times;</button>
+ 
+            <input type="hidden" class="videoIds" value="{{videoID}}"/>
+      
+
+<!--UPVOTE BUTTON-->
+    <input type="button" checked="{{checked}}" class="upvote" />
+<!--DOWNVOGTE BUTTON-->
+    <input type="button" checked="{{checked}}" class="downvote" />
+ 
+    <span class="text">{{upvotes}}</span>   
+      <img src={{videoThumb}} alt="Smiley face" height="60" width="60"/>
+<!--    <span class="text">{{videoTitle}}</span>-->
+      <span class="text" style="vertical-align: super;">{{videoTitle}}</span>
+  </li>
+</template>
