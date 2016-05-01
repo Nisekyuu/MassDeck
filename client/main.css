@@ -2,7 +2,7 @@
 body {
   font-family: sans-serif;
   background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  background-image: url('http://i.imgur.com/Kx51jHw.jpg');
   background-attachment: fixed;
  
   position: absolute;
@@ -18,7 +18,7 @@ body {
 }
  
 .container {
-  max-width: 650px;
+  max-width: 640px;
   margin: 0 auto;
   min-height: 100%;
   background: white;
@@ -29,6 +29,7 @@ header {
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
+    
 }
  
 #login-buttons {
@@ -36,7 +37,8 @@ header {
 }
  
 h1 {
-  font-size: 1.5em;
+font-family: 'Lato', sans-serif;
+  font-size: 3.5em;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
@@ -66,6 +68,7 @@ form {
 ul {
   margin: 0;
   padding: 0;
+    
   background: white;
 }
  
@@ -82,12 +85,11 @@ li {
   position: relative;
   list-style: none;
   padding: 15px;
-  border-bottom: #eee solid 1px;
+  border-bottom: #eee solid 2px;
 }
  
 li .text {
   margin-left: 15px;
-    
 }
  
 li.checked {
@@ -136,7 +138,6 @@ header .hide-completed {
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:14px;
 	padding:4px 10px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
@@ -159,7 +160,6 @@ header .hide-completed {
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:14px;
 	padding:4px 10px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;

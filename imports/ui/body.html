@@ -1,9 +1,9 @@
 <body>
   <div class="container">
     <header>
-      <h1>MASS DJ</h1>
+        <center><h1>SuperDeck</h1></center>
          
-      <form class="new-task">
+      <form class="new-task" style="border-top: #eef solid 2px;">
         <input type="text" name="text" placeholder="Search for songs on YouTube! Please use format ARTIST 'TITLE'" />
       </form>
     </header>
@@ -29,15 +29,25 @@
       //    after the API code downloads.
       var player;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: getCurrVideoId(),
-          events: {
+          if (getTotalNumVideo() === 0) {
+             player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'wPqTCrm61-I',
+            events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
+            }})
+          } else {
+                player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: getCurrVideoId(),
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }}); 
           }
-        });
       }
         
       // 4. The API will call this function when the video player is ready.
@@ -51,8 +61,6 @@
       var done = false;
       function onPlayerStateChange(event) {
         if (player.getPlayerState()==0) {
-            alert("Next Video will play.");
-            
             var currLi = $("#videoList li")[currVideoId];
             $(currLi).find(".delete").click();
             
